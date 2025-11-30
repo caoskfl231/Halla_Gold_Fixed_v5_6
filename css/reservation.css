@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  background: #000;
+  color: #eee;
+  font-family: -apple-system, BlinkMacSystemFont, "Pretendard", sans-serif;
+}
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: #111;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.app-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 14px;
+}
+.app-header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+.btn-clear-top {
+	padding: 6px 10px;
+	font-size: 12px;
+}
+.section {
+  background: #181818;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.row label {
+  flex: 0 0 70px;
+  font-size: 13px;
+}
+.row input, select {
+  flex: 0 0 auto;
+  min-width: 130px;
+  max-width: 170px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #000;
+  color: #eee;
+  font-size: 16px;
+}
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-main { width: 100%; background: #ffd700; color: #000; }
+.btn-blue { background: #3498db; color: #fff; }
+.btn-green { background: #16a085; color: #fff; }
+.btn-red { background: #c0392b; color: #fff; }
+
+.btn-copy {
+  background: #555;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btn-copy:active { background: #777; }
+
+.res-card {
+  border: 1px solid #333;
+  background: #151515;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.res-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.res-header-line .res-phone {
+  font-weight: 500;
+  color: #ffd700;
+  text-decoration: none;
+}
+.res-header-line .res-phone:hover {
+  text-decoration: underline;
+}
+.res-card.selected {
+  border-color: #ffd700;
+  box-shadow: 0 0 0 1px #ffd70044;
+}
+.res-subline {
+  font-size: 12px;
+  margin-top: 2px;
+}
+.res-detail {
+  margin-top: 6px;
+  display: none;
+}
+.res-detail.open {
+  display: block;
+}
+.res-count {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #ffd700;
+}
+.item-line {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px dashed #333;
+  padding: 4px 0;
+}
+.item-line span:nth-child(1) {
+  grid-column: 1 / 2;
+  text-align: left;
+  white-space: nowrap;
+}
+.item-line span:nth-child(2) {
+  grid-column: 2 / 3;
+  text-align: center;
+  color: #FFD700;
+  font-weight: 600;
+  font-feature-settings: "tnum";
+}
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  width: 100%;
+  max-width: 520px;
+  max-height: 100vh;
+  overflow: auto;
+  background: #181818;
+  border-radius: 0;
+  border: none;
+  padding: 8px 10px 10px;
+}
+.modal h2 { font-size: 16px; margin: 0 0 10px; }
+.modal-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modal-date-inline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.modal-date-inline label {
+  font-size: 13px;
+}
+.modal-date-inline input[type="date"] {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #000;
+  color: #eee;
+  font-size: 14px;
+}
+table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+th, td { border: 1px solid #333; padding: 4px; text-align: center; }
+th { background: #202020; font-size: 13px; }
+textarea {
+  width: 100%;
+  min-height: 36px;
+  resize: none;
+  background: #000;
+  color: #eee;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 4px;
+  line-height: 1.4;
+	font-size: 16px;
+}
+.sample-box {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-height: 68px;
+  padding-bottom: 4px;
+}
+.sample-box button {
+  background: #333;
+  border: none;
+  color: #ffd700;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+.sample-box button:active { background: #444; }
+
+/* 🔹 빠른 기간 선택 박스 (작게, 버튼 아래) */
+.quick-range-inline {
+  margin: 4px 0 8px 70px; /* label 폭만큼 들여쓰기 */
+  display: none;
+}
+.quick-range-inline.show { display: block; }
+.quick-range {
+  background: #151515;
+  border-radius: 12px;
+  border: 1px solid #333;
+  padding: 6px 8px 4px;
+  max-width: 260px;
+}
+.quick-range-title {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #bbb;
+}
+.quick-range-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 4px;
+}
+.quick-range-grid button {
+  background: #222;
+  border-radius: 999px;
+  border: 1px solid #444;
+  color: #eee;
+  padding: 4px 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+.quick-range-grid button:active {
+  background: #333;
+}
+
+.quick-range-manual {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+}
+.quick-range-manual span {
+  font-size: 11px;
+  color: #bbb;
+}
+.quick-range-manual input[type="date"] {
+  flex: 1;
+  padding: 4px 6px;
+  border-radius: 999px;
+  border: 1px solid #666;
+  background: #000;
+  color: #eee;
+  font-size: 11px;
+  cursor: pointer;
+}
+.quick-range-manual .btn {
+
+/* 직접 기간 선택용 날짜 라벨 */
+.date-label {
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+}
+
+.date-label-text {
+  font-size:11px;
+  color:#aaa;
+}
+  padding: 4px 8px;
+  font-size: 11px;
+}
+
+/* (이전) 카드 수정/삭제 팝업 스타일은 사용하지 않음 */
